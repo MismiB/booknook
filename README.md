@@ -97,7 +97,6 @@ The app will be at `http://localhost:5173`.
 |---|---|---|
 | `DATABASE_URL` | backend | Postgres connection string. Use Supabase's **pooled** connection string (port `6543`), not the direct one — the direct connection resolves to an IPv6-only address that most hosts (including Render) can't route to. |
 | `JWT_SECRET` | backend | Signing secret for login tokens. Any long random string; must stay the same across restarts or existing sessions become invalid. |
-| `FRONTEND_URL` | backend | *(optional)* Locks CORS down to this exact origin. If unset, the API accepts requests from any origin — fine for local dev, worth setting in production. |
 | `PORT` | backend | *(optional)* Defaults to `5000` locally; Render sets this automatically in production. |
 | `VITE_API_URL` | frontend | The backend's URL. Baked in at build time, so it must be set *before* building. |
 
