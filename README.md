@@ -97,7 +97,6 @@ The app will be at `http://localhost:5173`.
 |---|---|---|
 | `DATABASE_URL` | backend | Postgres connection string. Use Supabase's **pooled** connection string (port `6543`), not the direct one — the direct connection resolves to an IPv6-only address that most hosts (including Render) can't route to. |
 | `JWT_SECRET` | backend | Signing secret for login tokens. Any long random string; must stay the same across restarts or existing sessions become invalid. |
-| `PORT` | backend | *(optional)* Defaults to `5000` locally; Render sets this automatically in production. |
 | `VITE_API_URL` | frontend | The backend's URL. Baked in at build time, so it must be set *before* building. |
 
 ## Deployment
@@ -120,4 +119,4 @@ A `render.yaml` Blueprint is included as a reference for this setup, though the 
 
 - No social/community features (following, shared recommendations).
 - No e-reader sync (Kindle/Kobo highlights import, etc.).
-- No automated test suite — verification during development has been manual/exploratory (Playwright-driven smoke tests, not a checked-in test suite).
+- No automated test suite has been performed yet, verification during development has been manual/exploratory (Playwright-driven smoke tests, not a checked-in test suite).
