@@ -1,0 +1,203 @@
+.profile-page {
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.profile-page h1 {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--parchment);
+  margin: 0 0 0.3rem;
+}
+
+.profile-sub {
+  color: var(--parchment-dim);
+  font-size: 0.9rem;
+  margin: 0 0 2rem;
+}
+
+.profile-card {
+  background: var(--panel);
+  border: 1px solid var(--edge);
+  border-radius: var(--r-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.profile-card h2 {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--parchment);
+  margin: 0;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem;
+}
+
+@media (max-width: 500px) {
+  .field-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  min-width: 0;
+}
+
+.field label {
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--parchment-dim);
+}
+
+.field input,
+.field select {
+  background: var(--panel-2);
+  border: 1px solid var(--edge);
+  border-radius: var(--r-sm);
+  padding: 0.65rem 0.8rem;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.92rem;
+  color: var(--parchment);
+}
+
+.field input:focus-visible,
+.field select:focus-visible {
+  outline: none;
+  border-color: var(--brass);
+  box-shadow: 0 0 0 3px rgba(217, 165, 74, 0.22);
+}
+
+.profile-error {
+  color: var(--ember);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.profile-success {
+  color: var(--brass);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.profile-submit {
+  appearance: none;
+  align-self: flex-start;
+  border: none;
+  border-radius: var(--r-sm);
+  padding: 0.65rem 1.2rem;
+  background: var(--brass);
+  color: var(--on-accent);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.profile-submit:hover:not(:disabled) {
+  background: var(--brass-deep);
+}
+
+.profile-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.profile-form-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.profile-cancel {
+  appearance: none;
+  background: none;
+  border: none;
+  color: var(--parchment-dim);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.profile-cancel:hover:not(:disabled) {
+  color: var(--parchment);
+  text-decoration: underline;
+}
+
+.profile-cancel:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.profile-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.profile-edit {
+  appearance: none;
+  border: 1px solid var(--edge);
+  background: var(--panel-2);
+  color: var(--parchment);
+  border-radius: var(--r-sm);
+  padding: 0.5rem 0.9rem;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.profile-edit:hover {
+  border-color: var(--brass);
+  color: var(--brass);
+}
+
+.profile-info-list {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.profile-info-list > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.profile-info-list dt {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--parchment-dim);
+}
+
+.profile-info-list dd {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--parchment);
+}
+
+.profile-info-empty {
+  color: var(--parchment-dim);
+  font-style: italic;
+}

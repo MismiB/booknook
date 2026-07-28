@@ -1,0 +1,11 @@
+.watermark {
+  position: fixed;
+  left: 0;
+  bottom: -10px;
+  width: 100vw;
+  height: 340px;
+  z-index: 0;
+  pointer-events: none;
+  opacity: var(--watermark-opacity, 0.09);
+  transition: opacity 0.35s ease;
+}

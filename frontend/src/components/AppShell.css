@@ -1,0 +1,79 @@
+.app-shell {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.2rem 1.5rem;
+  border-bottom: 1px solid var(--edge);
+}
+
+.app-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--parchment);
+  flex: none;
+}
+
+.app-brand-mark {
+  width: 57px;
+  height: 26px;
+  flex: none;
+}
+
+.app-nav {
+  display: flex;
+  gap: 1.4rem;
+  flex: 1;
+}
+
+.app-nav a {
+  color: var(--parchment-dim);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 0.3rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+.app-nav a:hover {
+  color: var(--parchment);
+}
+
+.app-nav a.active {
+  color: var(--parchment);
+  border-bottom-color: var(--brass);
+}
+
+.app-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.88rem;
+  color: var(--parchment-dim);
+  flex: none;
+}
+
+.app-user button {
+  appearance: none;
+  background: var(--panel-2);
+  color: var(--parchment);
+  border: 1px solid var(--edge);
+  border-radius: var(--r-sm);
+  padding: 0.5rem 1rem;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.app-user button:hover {
+  border-color: var(--brass);
+}

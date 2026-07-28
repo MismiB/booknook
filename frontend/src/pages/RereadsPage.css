@@ -1,0 +1,157 @@
+.rereads-page {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.rereads-page h1 {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--parchment);
+  margin: 0 0 0.3rem;
+}
+
+.rereads-sub {
+  color: var(--parchment-dim);
+  font-size: 0.9rem;
+  margin: 0 0 1.8rem;
+}
+
+.rereads-error {
+  color: var(--ember);
+  font-size: 0.88rem;
+}
+
+.rereads-empty {
+  color: var(--parchment-dim);
+  font-size: 0.92rem;
+}
+
+.rereads-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--edge);
+  border-radius: var(--r-lg);
+  background: var(--panel);
+}
+
+.rereads-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.rereads-table th {
+  text-align: left;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--parchment-dim);
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid var(--edge);
+  white-space: nowrap;
+}
+
+.rereads-table td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid var(--edge);
+  color: var(--parchment);
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.rereads-table tr:last-child td {
+  border-bottom: none;
+}
+
+.rereads-book {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  white-space: normal;
+}
+
+.rereads-cover {
+  width: 32px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 3px;
+  flex: none;
+  background: var(--panel-2);
+}
+
+.rereads-cover--blank {
+  border: 1px dashed var(--edge);
+}
+
+.rereads-title {
+  font-size: 0.9rem;
+}
+
+.rereads-author {
+  font-size: 0.76rem;
+  color: var(--parchment-dim);
+}
+
+.rereads-count {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  color: var(--brass);
+}
+
+.rereads-log {
+  appearance: none;
+  border: 1px solid var(--edge);
+  background: var(--panel-2);
+  color: var(--parchment);
+  border-radius: var(--r-sm);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+}
+
+.rereads-log:hover:not(:disabled) {
+  border-color: var(--brass);
+  color: var(--brass);
+}
+
+.rereads-log:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.rereads-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.rereads-undo {
+  appearance: none;
+  border: 1px solid var(--edge);
+  background: transparent;
+  color: var(--parchment-dim);
+  border-radius: var(--r-sm);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+}
+
+.rereads-undo:hover:not(:disabled) {
+  border-color: var(--ember);
+  color: var(--ember);
+}
+
+.rereads-undo:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.rereads-date-cell {
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+}

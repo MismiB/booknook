@@ -1,0 +1,43 @@
+.goal-ring {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+
+.goal-ring svg circle {
+  transition: stroke 0.35s ease;
+}
+
+.goal-ring-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.goal-ring-num {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: var(--parchment);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.goal-ring-of {
+  font-size: 0.82rem;
+  color: var(--parchment-dim);
+  margin-top: 0.35rem;
+}
+
+.goal-ring-remaining {
+  font-size: 0.78rem;
+  color: var(--brass);
+  margin-top: 0.25rem;
+  font-weight: 600;
+}

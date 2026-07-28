@@ -1,0 +1,68 @@
+.theme-bar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+  padding: 0.7rem 1.2rem;
+  background: var(--panel);
+  border-bottom: 1px solid var(--edge);
+}
+
+.theme-bar--inline {
+  position: static;
+  z-index: auto;
+  padding: 0;
+  background: transparent;
+  border-bottom: none;
+}
+
+.theme-bar .tb-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--parchment-dim);
+  margin-right: 0.2rem;
+}
+
+.theme-btn {
+  appearance: none;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  border: 1px solid var(--edge);
+  background: var(--panel-2);
+  color: var(--parchment);
+  border-radius: 999px;
+  padding: 0.32rem 0.7rem 0.32rem 0.32rem;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.15s ease, transform 0.1s ease;
+}
+
+.theme-btn:hover {
+  transform: translateY(-1px);
+}
+
+.theme-btn:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 2px;
+}
+
+.theme-btn[aria-pressed="true"] {
+  border-color: var(--brass);
+  box-shadow: 0 0 0 1px var(--brass);
+}
+
+.swatch {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  flex: none;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15);
+}

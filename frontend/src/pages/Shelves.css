@@ -1,0 +1,446 @@
+.shelves {
+  padding-bottom: 4rem;
+}
+
+.search-row {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.search-row input {
+  flex: 1;
+  background: var(--panel);
+  border: 1px solid var(--edge);
+  border-radius: var(--r-sm);
+  padding: 0.65rem 0.85rem;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.95rem;
+  color: var(--parchment);
+}
+
+.search-row input:focus-visible {
+  outline: none;
+  border-color: var(--brass);
+  box-shadow: 0 0 0 3px rgba(217, 165, 74, 0.22);
+}
+
+.search-row button {
+  appearance: none;
+  border: none;
+  border-radius: var(--r-sm);
+  padding: 0.65rem 1rem;
+  background: var(--brass);
+  color: var(--on-accent);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.search-row button:hover:not(:disabled) {
+  background: var(--brass-deep);
+}
+
+.search-row button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.shelves-error {
+  color: var(--ember);
+  font-size: 0.88rem;
+  margin: 0 0 1rem;
+}
+
+.results {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 1px solid var(--edge);
+  border-radius: var(--r-lg);
+  background: var(--panel);
+  max-height: 662px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-color: var(--edge) transparent;
+}
+
+.results::-webkit-scrollbar {
+  width: 8px;
+}
+
+.results::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.results::-webkit-scrollbar-thumb {
+  background: var(--edge);
+  border-radius: 999px;
+}
+
+.results::-webkit-scrollbar-thumb:hover {
+  background: var(--brass-deep);
+}
+
+.result-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  padding: 0.4rem;
+}
+
+.result-add-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  flex-basis: 100%;
+  margin-left: calc(36px + 0.75rem);
+}
+
+.result-add-options button {
+  appearance: none;
+  border: 1px solid var(--edge);
+  background: var(--panel-2);
+  color: var(--parchment);
+  border-radius: 999px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 500;
+  padding: 0.32rem 0.7rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.result-add-options button:hover {
+  border-color: var(--brass);
+  color: var(--brass);
+}
+
+.result-cover,
+.book-cover {
+  width: 36px;
+  height: 54px;
+  object-fit: cover;
+  border-radius: 3px;
+  flex: none;
+  background: var(--panel-2);
+}
+
+.result-cover--blank,
+.book-cover--blank {
+  border: 1px dashed var(--edge);
+}
+
+.result-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.result-title {
+  font-size: 0.9rem;
+  color: var(--parchment);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.result-author {
+  font-size: 0.78rem;
+  color: var(--parchment-dim);
+}
+
+.shelf-tabs {
+  display: flex;
+  gap: 0.4rem;
+  border-bottom: 1px solid var(--edge);
+  margin-bottom: 1.8rem;
+}
+
+.shelf-tab {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--parchment-dim);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.7rem 0.2rem;
+  margin-right: 1.4rem;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.shelf-tab[aria-selected="true"] {
+  color: var(--parchment);
+  border-bottom-color: var(--brass);
+}
+
+.shelf-tab .count {
+  font-size: 0.72rem;
+  color: var(--parchment-dim);
+  background: var(--panel-2);
+  border-radius: 999px;
+  padding: 0.1rem 0.45rem;
+}
+
+.empty-state {
+  color: var(--parchment-dim);
+  font-size: 0.92rem;
+}
+
+.book-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  gap: 1.4rem;
+}
+
+.book-card {
+  background: var(--panel);
+  border: 1px solid var(--edge);
+  border-radius: var(--r-lg);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.book-card .book-cover {
+  width: 100%;
+  height: 11rem;
+  border-radius: var(--r-sm);
+}
+
+.book-title {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 1.05rem;
+  color: var(--parchment);
+  line-height: 1.3;
+}
+
+.book-title-link {
+  text-decoration: none;
+}
+
+.book-title-link:hover {
+  color: var(--brass);
+  text-decoration: underline;
+}
+
+.book-author {
+  font-size: 0.8rem;
+  color: var(--parchment-dim);
+}
+
+.genre-select {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.genre-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex: none;
+}
+
+.genre-select select {
+  flex: 1;
+  min-width: 0;
+  background: var(--panel-2);
+  border: 1px solid var(--edge);
+  border-radius: var(--r-sm);
+  color: var(--parchment);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.76rem;
+  padding: 0.3rem 0.4rem;
+}
+
+.view-details {
+  appearance: none;
+  flex: 0 0 auto;
+  border: 1px solid var(--edge);
+  background: transparent;
+  color: var(--parchment-dim);
+  border-radius: var(--r-sm);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.78rem;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.view-details:hover {
+  border-color: var(--brass);
+  color: var(--brass);
+}
+
+.book-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.4rem;
+}
+
+.book-actions select {
+  flex: 1 1 auto;
+  min-width: 0;
+  background: var(--panel-2);
+  border: 1px solid var(--edge);
+  border-radius: var(--r-sm);
+  color: var(--parchment);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.78rem;
+  padding: 0.4rem;
+}
+
+.book-actions .remove {
+  appearance: none;
+  flex: 0 0 auto;
+  border: 1px solid var(--edge);
+  background: transparent;
+  color: var(--parchment-dim);
+  border-radius: var(--r-sm);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.78rem;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+}
+
+.no-results {
+  color: var(--parchment-dim);
+  font-size: 0.88rem;
+  margin: 0 0 1rem;
+}
+
+.link-button {
+  appearance: none;
+  background: none;
+  border: none;
+  color: var(--brass);
+  font-family: 'Work Sans', sans-serif;
+  font-size: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.link-button:hover {
+  text-decoration: underline;
+}
+
+.manual-add-toggle {
+  appearance: none;
+  display: block;
+  background: none;
+  border: none;
+  color: var(--parchment-dim);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.manual-add-toggle:hover {
+  color: var(--brass);
+  text-decoration: underline;
+}
+
+.manual-form {
+  background: var(--panel);
+  border: 1px solid var(--edge);
+  border-radius: var(--r-lg);
+  padding: 1.3rem 1.4rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.manual-form-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.manual-form-head h3 {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--parchment);
+  margin: 0;
+}
+
+.manual-form .field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 500px) {
+  .manual-form .field-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.manual-form .field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.manual-form label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--parchment-dim);
+}
+
+.manual-form input,
+.manual-form select {
+  background: var(--panel-2);
+  border: 1px solid var(--edge);
+  border-radius: var(--r-sm);
+  padding: 0.6rem 0.75rem;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.9rem;
+  color: var(--parchment);
+}
+
+.manual-form input:focus-visible,
+.manual-form select:focus-visible {
+  outline: none;
+  border-color: var(--brass);
+  box-shadow: 0 0 0 3px rgba(217, 165, 74, 0.22);
+}
+
+.manual-cover-preview {
+  width: 64px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--edge);
+  align-self: flex-start;
+}
+
+.book-actions .remove:hover {
+  border-color: var(--ember);
+  color: var(--ember);
+}
